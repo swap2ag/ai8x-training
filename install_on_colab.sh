@@ -28,11 +28,11 @@ $PYTHON_VERSION --version
 $PYTHON_VERSION -m pip install virtualenv
 $PYTHON_VERSION -m virtualenv $TRAIN_REPO_DIR/venv-train
 source $TRAIN_REPO_DIR/venv-train/bin/activate
-$PYTHON_VERSION -m pip install -r requirements-cu11.txt
+$PYTHON_VERSION -m pip install -r $TRAIN_REPO_DIR/requirements-cu11.txt
 
 $PYTHON_VERSION -m virtualenv $SYNTHESIS_REPO_DIR/venv-synthesis
 source $SYNTHESIS_REPO_DIR/venv-synthesis/bin/activate
-$PYTHON_VERSION -m pip install -r requirements.txt
+$PYTHON_VERSION -m pip install -r $SYNTHESIS_REPO_DIR/requirements.txt
 
 # train
 cd $TRAIN_REPO_DIR
