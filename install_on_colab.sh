@@ -34,11 +34,8 @@ python -m pip install -r requirements-cu11.txt
 cd $ROOT_DIR
 
 nvidia-smi
-from platform import python_version
-import torch
-print("Python version", python_version())
-print("Pytorch - version", torch.__version__)
-print("Pytorch - cuDNN version :", torch.backends.cudnn.version())
+
+python check_cuda.py
 
 # To be used later
 # $PYTHON_VERSION -m virtualenv $SYNTHESIS_REPO_DIR/venv-synthesis
