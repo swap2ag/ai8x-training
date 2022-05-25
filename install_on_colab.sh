@@ -19,9 +19,9 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo add-apt-repository universe
 sudo apt update
+sudo apt install python3-pip
 sudo apt install $PYTHON_VERSION -y
 sudo apt install $PYTHON_VERSION-distutils -y
-sudo apt install $PYTHON_VERSION-pip -y
 $PYTHON_VERSION --version
 
 
