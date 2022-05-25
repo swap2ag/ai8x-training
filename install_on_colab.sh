@@ -17,6 +17,8 @@ git clone https://github.com/swap2ag/ai8x-synthesis --recurse-submodules
 sudo apt install libsndfile1 -y
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo add-apt-repository universe
+sudo apt update
 sudo apt install $PYTHON_VERSION -y
 sudo apt install $PYTHON_VERSION-distutils -y
 sudo apt install $PYTHON_VERSION-pip -y
