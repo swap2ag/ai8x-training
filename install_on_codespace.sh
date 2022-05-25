@@ -2,6 +2,7 @@
 cd /workspaces/ai8x-training/
 git submodule update --init
 
+sudo apt-get install libsndfile1 -y
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8 -y
