@@ -31,13 +31,14 @@ source $TRAIN_REPO_DIR/venv-train/bin/activate
 cd $TRAIN_REPO_DIR
 python -m pip install -r requirements-cu11.txt
 
-
-# train
-cd $TRAIN_REPO_DIR
-chmod +x ./scripts/train_mnist.sh
-./scripts/train_mnist.sh
-
 cd $ROOT_DIR
+
+nvidia-smi
+from platform import python_version
+import torch
+print("Python version", python_version())
+print("Pytorch - version", torch.__version__)
+print("Pytorch - cuDNN version :", torch.backends.cudnn.version())
 
 # To be used later
 # $PYTHON_VERSION -m virtualenv $SYNTHESIS_REPO_DIR/venv-synthesis
