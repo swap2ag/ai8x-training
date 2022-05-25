@@ -94,7 +94,7 @@ from torch.backends import cudnn
 
 # pylint: disable=wrong-import-order
 import distiller
-# import examples.auto_compression.amc as adc
+import examples.auto_compression.amc as adc
 import shap
 import torchnet.meter as tnt
 from distiller import apputils, model_summaries
@@ -1398,9 +1398,8 @@ def automated_deep_compression(model, criterion, _optimizer, loggers, args):
 
     save_checkpoint_fn = partial(apputils.save_checkpoint, arch=args.cnn, dir=msglogger.logdir)
     optimizer_data = {'lr': args.lr, 'momentum': args.momentum, 'weight_decay': args.weight_decay}
-    # TODO: Uncomment below code
-    # adc.amc.train_auto_compressor(model, args, optimizer_data,
-                                #   validate_fn, save_checkpoint_fn, train_fn)
+    adc.amc.train_auto_compressor(model, args, optimizer_data,
+                                  validate_fn, save_checkpoint_fn, train_fn)
 
 
 def greedy(model, criterion, _optimizer, loggers, args):
