@@ -14,13 +14,14 @@ cd $ROOT_DIR
 
 git clone https://github.com/swap2ag/ai8x-synthesis --recurse-submodules
 
-sudo apt-get install libsndfile1 -y
+sudo apt install libsndfile1 -y
 sudo apt install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt install $PYTHON_VERSION -y
+sudo apt install $PYTHON_VERSION-distutils -y
+sudo apt install $PYTHON_VERSION-pip -y
 $PYTHON_VERSION --version
 
-sudo apt-get install $PYTHON_VERSION-distutils -y
 
 $PYTHON_VERSION -m pip install virtualenv
 $PYTHON_VERSION -m virtualenv $TRAIN_REPO_DIR/venv-train
